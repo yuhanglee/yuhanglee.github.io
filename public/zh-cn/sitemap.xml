@@ -2,9 +2,6 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   ><url>
-      <loc>https://yuhanglee.github.io/friends/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-      <loc>https://yuhanglee.github.io/tags/aaaddd/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-      <loc>https://yuhanglee.github.io/categories/aaaddd/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
       <loc>https://yuhanglee.github.io/categories/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
@@ -18,6 +15,7 @@
           hreflang="zh-cn"
           href="https://yuhanglee.github.io/categories/"
           /></url><url>
+      <loc>https://yuhanglee.github.io/categories/markdown/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
       <loc>https://yuhanglee.github.io/posts/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
       <loc>https://yuhanglee.github.io/tags/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
@@ -32,6 +30,8 @@
           hreflang="zh-cn"
           href="https://yuhanglee.github.io/tags/"
           /></url><url>
+      <loc>https://yuhanglee.github.io/tags/%E9%85%8D%E7%BD%AE/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://yuhanglee.github.io/tags/%E6%96%87%E7%AB%A0/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
       <loc>https://yuhanglee.github.io/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
@@ -45,4 +45,11 @@
           hreflang="zh-cn"
           href="https://yuhanglee.github.io/"
           /></url><url>
+      <loc>https://yuhanglee.github.io/posts/2023/12/23/user-guide/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://yuhanglee.github.io/friends/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://yuhanglee.github.io/categories/aaa/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://yuhanglee.github.io/posts/2023/12/23/second/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://yuhanglee.github.io/tags/%E5%AE%89%E8%A3%85/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://yuhanglee.github.io/tags/aaaddd/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://yuhanglee.github.io/categories/aaaddd/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
       <loc>https://yuhanglee.github.io/posts/2023/02/20/first_post/</loc><lastmod>2023-12-23T21:29:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>

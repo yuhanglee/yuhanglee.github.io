@@ -1,43 +1,5 @@
----
-title: 用户指南
-subtitle:
-date: 2023-12-23T18:42:48+08:00
-draft: false
-author:
-  name:
-  link:
-  email:
-  avatar:
-description:
-keywords:
-license:
-comment: false
-weight: 0
-tags:
-  - 配置
-  - 文章
-categories:
-  - Markdown
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRss: false
-summary:
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-toc: true
-math: false
-lightgallery: false
-password:
-message:
-repost:
-  enable: false
-  url:
+# 用户指南
 
-# See details front matter: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter
----
 
 FixIt 支持的Markdown语法。
 
@@ -595,3 +557,9 @@ https://www.bilibili.com/video/BV1Sx411T7QQ
 bilibili id=BV1Sx411T7QQ
 ```
 {{< bilibili id=BV1Sx411T7QQ >}}
+
+---
+
+> 作者: <no value>  
+> URL: https://yuhanglee.github.io/posts/2023/12/23/user-guide/  
+
