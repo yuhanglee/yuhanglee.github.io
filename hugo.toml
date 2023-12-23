@@ -15,7 +15,7 @@ description = "这是我的 Hugo FixIt 网站"
 # 网站关键词
 keywords = ["Hugo", "FixIt"]
 # Hostname (and path) to the root
-baseURL = "http://localhost:1313"
+baseURL = "https://yuhanglee.github.io"
 # theme list
 theme = ["FixIt"]
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
