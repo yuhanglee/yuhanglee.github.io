@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>所有文章 - 我的 Hugo FixIt 网站</title>
+    <link>https://yuhanglee.github.io/posts/</link>
+    <description>所有文章 | 我的 Hugo FixIt 网站</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeekwe@126.com (yuhanglee)</managingEditor>
+      <webMaster>jeekwe@126.com (yuhanglee)</webMaster><lastBuildDate>Mon, 20 Feb 2023 20:14:22 &#43;0800</lastBuildDate><atom:link href="https://yuhanglee.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>我的第一篇文章</title>
+  <link>https://yuhanglee.github.io/posts/2023/02/20/first_post/</link>
+  <pubDate>Mon, 20 Feb 2023 20:14:22 &#43;0800</pubDate>
+  <author>yuhanglee</author>
+  <guid>https://yuhanglee.github.io/posts/2023/02/20/first_post/</guid>
+  <description><![CDATA[<h1 id="hello">hello</h1>
+<h2 id="hello-2">hello 2</h2>
+<p><img loading="lazy" src="/images/alipay.jpg" srcset="/images/alipay.jpg?size=small, /images/alipay.jpg?size=medium 1.5x, /images/alipay.jpg?size=large 2x" sizes="auto" data-title="123" data-alt="123" style="background: url(/svg/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;this.alt=this.dataset.alt;for(const i of ['style', 'data-title','data-alt','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;this.alt=this.dataset.alt;for(const i of ['style', 'data-title','data-alt','onerror','onload']){this.removeAttribute(i);}"/></p>]]></description>
+</item>
+</channel>
+</rss>

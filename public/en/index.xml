@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>My Hugo FixIt Site</title>
+    <link>https://yuhanglee.github.io/en/</link>
+    <description>My Hugo FixIt Site</description>
+    <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jeekwe@126.com (yuhanglee)</managingEditor>
+      <webMaster>jeekwe@126.com (yuhanglee)</webMaster>
+      <atom:link href="https://yuhanglee.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>
