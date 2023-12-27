@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>教程 - 分类 - 我的 Hugo FixIt 网站</title>
+    <link>https://yuhanglee.github.io/categories/%E6%95%99%E7%A8%8B/</link>
+    <description>教程 - 分类 - 我的 Hugo FixIt 网站</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeekwe@126.com (yuhanglee)</managingEditor>
+      <webMaster>jeekwe@126.com (yuhanglee)</webMaster><lastBuildDate>Wed, 27 Dec 2023 21:41:43 &#43;0800</lastBuildDate><atom:link href="https://yuhanglee.github.io/categories/%E6%95%99%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+  <title>2Day</title>
+  <link>https://yuhanglee.github.io/posts/2023/12/27/2day/</link>
+  <pubDate>Wed, 27 Dec 2023 21:41:43 &#43;0800</pubDate>
+  <author>yuhanglee</author>
+  <guid>https://yuhanglee.github.io/posts/2023/12/27/2day/</guid>
+  <description><![CDATA[<p>我们可以创建属于自己的模块，也叫做&quot;造轮子&quot;。</p>]]></description>
+</item>
+<item>
+  <title>1Day</title>
+  <link>https://yuhanglee.github.io/posts/2023/12/24/1day/</link>
+  <pubDate>Sun, 24 Dec 2023 22:00:51 &#43;0800</pubDate>
+  <author>yuhanglee</author>
+  <guid>https://yuhanglee.github.io/posts/2023/12/24/1day/</guid>
+  <description><![CDATA[<p>借鉴<a href="http://docscn.studygolang.com/doc/tutorial/getting-started"target="_blank" rel="external nofollow noopener noreferrer">官方教程</a>，编写合适基础开发者的Go语言教程。</p>]]></description>
+</item>
+</channel>
+</rss>
