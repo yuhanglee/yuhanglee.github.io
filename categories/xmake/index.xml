@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>xmake - 分类 | 博客</title><link>https://yuhanglee.github.io/categories/xmake/</link><description>xmake - 分类 | 博客</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Tue, 02 Jan 2024 21:43:58 +0800</lastBuildDate><atom:link href="https://yuhanglee.github.io/categories/xmake/" rel="self" type="application/rss+xml"/><item><title>xmake-第一天</title><link>https://yuhanglee.github.io/posts/xmake%E7%AC%AC%E4%B8%80%E5%A4%A9/</link><pubDate>Tue, 02 Jan 2024 21:43:58 +0800</pubDate><author>liyuhang</author><guid>https://yuhanglee.github.io/posts/xmake%E7%AC%AC%E4%B8%80%E5%A4%A9/</guid><description><![CDATA[<p><a href="https://xmake.io/#/zh-cn/getting_started"target="_blank" rel="external nofollow noopener noreferrer">xmake官方教程<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+<h2 id="1-安装-xmake" class="heading-element"><span>1 1. 安装 xmake</span>
+  <a href="#1-%e5%ae%89%e8%a3%85-xmake" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo add-apt-repository ppa:xmake-io/xmake
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install xmake</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description></item></channel></rss>

@@ -1,0 +1,7 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>经验 - 分类 | 博客</title><link>https://yuhanglee.github.io/categories/%E7%BB%8F%E9%AA%8C/</link><description>经验 - 分类 | 博客</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Thu, 11 Jan 2024 21:12:25 +0800</lastBuildDate><atom:link href="https://yuhanglee.github.io/categories/%E7%BB%8F%E9%AA%8C/" rel="self" type="application/rss+xml"/><item><title>项目经验</title><link>https://yuhanglee.github.io/posts/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E9%AA%8C/</link><pubDate>Thu, 11 Jan 2024 21:12:25 +0800</pubDate><author>liyuhang</author><guid>https://yuhanglee.github.io/posts/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E9%AA%8C/</guid><description><![CDATA[<p>个人的一些经历和项目经验更新，同时也会记录日常开发中使用的开发工具。</p>
+<ol>
+<li><a href="../driver/">TC297驱动研究</a></li>
+<li><a href="../xmake-%e7%ac%ac%e4%b8%80%e5%a4%a9/">xmake 第一天</a></li>
+<li><a href="../go%e6%95%99%e7%a8%8b-%e7%ac%ac%e4%b8%80%e5%a4%a9/">go 第一天</a></li>
+<li><a href="../go%e6%95%99%e7%a8%8b-%e7%ac%ac%e4%ba%8c%e5%a4%a9/">go 第二天</a></li>
+</ol>]]></description></item></channel></rss>
