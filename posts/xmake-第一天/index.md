@@ -25,5 +25,5 @@ sudo apt install xmake
 ---
 
 > 作者: yuhang  
-> URL: https://yuhanglee.github.io/posts/xmake%E7%AC%AC%E4%B8%80%E5%A4%A9/  
+> URL: https://yuhanglee.github.io/posts/xmake-%E7%AC%AC%E4%B8%80%E5%A4%A9/  
 
