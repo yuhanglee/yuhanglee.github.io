@@ -141,5 +141,5 @@ Most &lt;mark&gt;salamanders&lt;/mark&gt; are nocturnal, and hunt for insects, w
 ---
 
 > 作者: [liyuhang](https://github.com/yuhanglee)  
-> URL: https://yuhanglee.github.io/posts/markdown-syntax-guide/  
+> URL: https://yuhanglee.github.io/posts/markdown-syntax/  
 

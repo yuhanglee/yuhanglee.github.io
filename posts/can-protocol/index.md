@@ -163,5 +163,5 @@ ID: CAN 报文发送报文时，是需要获取仲裁权的。`ID` 数值越小�
 ---
 
 > 作者: [liyuhang](https://github.com/yuhanglee)  
-> URL: https://yuhanglee.github.io/posts/can%E5%8D%8F%E8%AE%AE/  
+> URL: https://yuhanglee.github.io/posts/can-protocol/  
 
