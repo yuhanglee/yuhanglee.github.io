@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客</title><link>https://yuhanglee.github.io/</link><description>lyh的博客：记录工作生活乐趣。</description><generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Sat, 01 Feb 2025 01:48:47 +0000</lastBuildDate><atom:link href="https://yuhanglee.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Start</title><link>https://yuhanglee.github.io/posts/hugo-start/</link><pubDate>Mon, 20 May 2024 22:20:48 +0800</pubDate><guid>https://yuhanglee.github.io/posts/hugo-start/</guid><description>&lt;p>本博客是由hugo构建的，使用的主题为 &lt;code>stack&lt;/code>。下面介绍一个比较方便的使用 &lt;code>hugo&lt;/code> + &lt;code>stack&lt;/code> + &lt;code>github page&lt;/code> 来构建属于自己的博客。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客</title><link>https://yuhanglee.github.io/</link><description>lyh的博客：记录工作生活乐趣。</description><generator>Hugo 0.143.0 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Sun, 02 Feb 2025 00:36:02 +0000</lastBuildDate><atom:link href="https://yuhanglee.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Start</title><link>https://yuhanglee.github.io/posts/hugo-start/</link><pubDate>Mon, 20 May 2024 22:20:48 +0800</pubDate><guid>https://yuhanglee.github.io/posts/hugo-start/</guid><description>&lt;p>本博客是由hugo构建的，使用的主题为 &lt;code>stack&lt;/code>。下面介绍一个比较方便的使用 &lt;code>hugo&lt;/code> + &lt;code>stack&lt;/code> + &lt;code>github page&lt;/code> 来构建属于自己的博客。&lt;/p>
 &lt;p>可以参考 &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter"target="_blank" rel="external nofollow noopener noreferrer">hugo-stack开始指南&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>来执行构建过程。
 下面我简单复刻一下过程，并对我认为需要注意的地方进行标注。&lt;/p>
 &lt;ul>
@@ -15,8 +15,7 @@
 在当前仓库内，点击 &lt;code>code&lt;/code> -&amp;gt; &lt;code>Codespaces&lt;/code> -&amp;gt; &lt;code>+&lt;/code> ，添加一个对应的代码空间。该空间是一个云端，由github提供。
 &lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/hugo-start/images/image-2.png?size=large" data-thumbnail="/posts/hugo-start/images/image-2.png?size=small" data-sub-html="&lt;h2>code namespaces&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/hugo-start/images/image-2.png" alt="code namespaces" srcset="https://yuhanglee.github.io/posts/hugo-start/images/image-2.png?size=small, https://yuhanglee.github.io/posts/hugo-start/images/image-2.png?size=medium 1.5x, https://yuhanglee.github.io/posts/hugo-start/images/image-2.png?size=large 2x" data-title="code namespaces" style="--width: 414px;--aspect-ratio: 414 / 489;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>
 等待进度加载完成。加载过程中是在构建hugo环境和下载对应的组件及主题。
-&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=large" data-thumbnail="/posts/hugo-start/images/image-3.png?size=small" data-sub-html="&lt;h2>进度加载&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/hugo-start/images/image-3.png" alt="进度加载" srcset="https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=small, https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=medium 1.5x, https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=large 2x" data-title="进度加载" style="--width: 710px;--aspect-ratio: 710 / 449;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
-&lt;/blockquote>
+&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=large" data-thumbnail="/posts/hugo-start/images/image-3.png?size=small" data-sub-html="&lt;h2>进度加载&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/hugo-start/images/image-3.png" alt="进度加载" srcset="https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=small, https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=medium 1.5x, https://yuhanglee.github.io/posts/hugo-start/images/image-3.png?size=large 2x" data-title="进度加载" style="--width: 710px;--aspect-ratio: 710 / 449;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>&lt;/blockquote>
 &lt;p>进度完成之后，执行 &lt;code>hugo serve -D&lt;/code> 即可开启远端服务。
 &lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/hugo-start/images/image-4.png?size=large" data-thumbnail="/posts/hugo-start/images/image-4.png?size=small" data-sub-html="&lt;h2>启动远端服务&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/hugo-start/images/image-4.png" alt="启动远端服务" srcset="https://yuhanglee.github.io/posts/hugo-start/images/image-4.png?size=small, https://yuhanglee.github.io/posts/hugo-start/images/image-4.png?size=medium 1.5x, https://yuhanglee.github.io/posts/hugo-start/images/image-4.png?size=large 2x" data-title="启动远端服务" style="--width: 612px;--aspect-ratio: 612 / 251;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
 &lt;p>使用 &lt;code>CTRL按键&lt;/code> + &lt;code>鼠标&lt;/code> 点击 &lt;code>localhost:1313&lt;/code>，就可以打开网页。欣赏自己的第一个博客。
@@ -96,14 +95,12 @@
 &lt;/h3>&lt;p>&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/can-protocol/images/CAN-bus.jpg?size=large" data-thumbnail="/posts/can-protocol/images/CAN-bus.jpg?size=small" data-sub-html="&lt;h2>can协议&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/can-protocol/images/CAN-bus.jpg" alt="can协议" srcset="https://yuhanglee.github.io/posts/can-protocol/images/CAN-bus.jpg?size=small, https://yuhanglee.github.io/posts/can-protocol/images/CAN-bus.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/can-protocol/images/CAN-bus.jpg?size=large 2x" data-title="can协议" style="--width: 1064px;--aspect-ratio: 1064 / 974;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
 &lt;p>一直都说，CAN总线是汽车上最重要的总线接口之一。那么，CAN总线是什么呢？&lt;/p>
 &lt;blockquote>
-&lt;p>什么是CAN总线?&lt;/p>
-&lt;/blockquote>
+&lt;p>什么是CAN总线?&lt;/p>&lt;/blockquote>
 &lt;p>你的汽车就像一个人的身体:控制器区域网络(CAN总线)是神经系统，实现通信。反过来，“节点”或“电子控制单元”(ecu)就像身体的一部分，通过CAN总线相互连接。一部分感知到的信息可以与另一部分共享。&lt;/p>
 &lt;p>&lt;figure>&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/can-protocol/images/CAR&amp;amp;BUS.jpg?size=large" data-thumbnail="/posts/can-protocol/images/CAR&amp;amp;BUS.jpg?size=small" data-sub-html="&lt;h2>can总线&lt;/h2>&lt;p>hello&lt;/p>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/can-protocol/images/CAR&amp;amp;BUS.jpg" alt="can总线" srcset="https://yuhanglee.github.io/posts/can-protocol/images/CAR&amp;amp;BUS.jpg?size=small, https://yuhanglee.github.io/posts/can-protocol/images/CAR&amp;amp;BUS.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/can-protocol/images/CAR&amp;amp;BUS.jpg?size=large 2x" data-title="hello" style="--width: 1191px;--aspect-ratio: 1191 / 307;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">can总线&lt;/figcaption>
  &lt;/figure>&lt;/p>
 &lt;blockquote>
-&lt;p>什么是ECU&lt;/p>
-&lt;/blockquote>
+&lt;p>什么是ECU&lt;/p>&lt;/blockquote>
 &lt;p>在汽车CAN总线系统中，ECU可以是发动机控制单元、安全气囊、音响系统等。一辆现代汽车可能有多个ECU，每个ECU都有可能需要与其他网络部分共享的信息。&lt;/p>
 &lt;p>&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/can-protocol/images/ECU_Trans.png?size=large" data-thumbnail="/posts/can-protocol/images/ECU_Trans.png?size=small" data-sub-html="&lt;h2>ECU&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/can-protocol/images/ECU_Trans.png" alt="ECU" srcset="https://yuhanglee.github.io/posts/can-protocol/images/ECU_Trans.png?size=small, https://yuhanglee.github.io/posts/can-protocol/images/ECU_Trans.png?size=medium 1.5x, https://yuhanglee.github.io/posts/can-protocol/images/ECU_Trans.png?size=large 2x" data-title="ECU" style="--width: 1091px;--aspect-ratio: 1091 / 470;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
 &lt;p>这就是CAN标准排得上用场的地方：&lt;/p>
@@ -142,20 +139,16 @@
  &lt;/a>
 &lt;/h3>&lt;p>由于CAN总线具有以下优点，CAN总线标准几乎用于所有车辆和许多场景。&lt;/p>
 &lt;blockquote>
-&lt;p>简单，低成本&lt;/p>
-&lt;/blockquote>
+&lt;p>简单，低成本&lt;/p>&lt;/blockquote>
 &lt;p>ECU可以通过单个CAN系统进行通信，而不使用更加复杂的模拟信号总线，从而减少了错误、复杂、布线、成本。&lt;/p>
 &lt;blockquote>
-&lt;p>集中&lt;/p>
-&lt;/blockquote>
+&lt;p>集中&lt;/p>&lt;/blockquote>
 &lt;p>CAN总线提供了与所有ECU网络通信的入口点，且不分主从，可以进行双向通信，从而实现中央诊断、数据记录和配置。&lt;/p>
 &lt;blockquote>
-&lt;p>健壮&lt;/p>
-&lt;/blockquote>
+&lt;p>健壮&lt;/p>&lt;/blockquote>
 &lt;p>该系统对电气干扰和电磁干扰具有鲁棒性，是安全关键应用的理想选择&lt;/p>
 &lt;blockquote>
-&lt;p>高效&lt;/p>
-&lt;/blockquote>
+&lt;p>高效&lt;/p>&lt;/blockquote>
 &lt;p>CAN具有仲裁性，数据报文可以按照ID确定优先级，以便最高优先级的数据得到立即总线访问，而不会导致其他帧的中断。&lt;/p>
 &lt;h3 id="can-历史" class="heading-element">&lt;span>1.5 CAN 历史&lt;/span>
  &lt;a href="#can-%e5%8e%86%e5%8f%b2" class="heading-mark">
@@ -179,8 +172,7 @@
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h3>&lt;blockquote>
-&lt;p>展望未来，CAN总线协议将保持相关性。&lt;/p>
-&lt;/blockquote>
+&lt;p>展望未来，CAN总线协议将保持相关性。&lt;/p>&lt;/blockquote>
 &lt;p>尽管CAN总线还受到以下主要趋势的影响：&lt;/p>
 &lt;ul>
 &lt;li>对日益先进的车辆功能需求&lt;/li>
@@ -194,8 +186,7 @@
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h3>&lt;blockquote>
-&lt;p>CAN FD 的定义&lt;/p>
-&lt;/blockquote>
+&lt;p>CAN FD 的定义&lt;/p>&lt;/blockquote>
 &lt;h3 id="can-fd-的兴起" class="heading-element">&lt;span>1.8 CAN FD 的兴起&lt;/span>
  &lt;a href="#can-fd-%e7%9a%84%e5%85%b4%e8%b5%b7" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
@@ -216,8 +207,7 @@
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h3>&lt;blockquote>
-&lt;p>CAN总线上的 通信是通过CAN报文来定义，通常也会称为CAN报文。&lt;/p>
-&lt;/blockquote>
+&lt;p>CAN总线上的 通信是通过CAN报文来定义，通常也会称为CAN报文。&lt;/p>&lt;/blockquote>
 &lt;p>下图是CAN标准帧(CAN 2.0 A)的位定义，其中包括11bit的标识符(ID)，可以满足大多数汽车使用。扩展帧(CAN 2.0 B)除了标识符更长，达到了29bit，并且EXT需要置为显性电平，其余都和标准帧保持一致。&lt;/p>
 &lt;p>&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/can-protocol/images/CAN%E6%A0%87%E5%87%86%E5%B8%A7%E5%AE%9A%E4%B9%89.png?size=large" data-thumbnail="/posts/can-protocol/images/CAN%E6%A0%87%E5%87%86%E5%B8%A7%E5%AE%9A%E4%B9%89.png?size=small" data-sub-html="&lt;h2>CAN标准帧定义&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/can-protocol/images/CAN%E6%A0%87%E5%87%86%E5%B8%A7%E5%AE%9A%E4%B9%89.png" alt="CAN标准帧定义" srcset="https://yuhanglee.github.io/posts/can-protocol/images/CAN%E6%A0%87%E5%87%86%E5%B8%A7%E5%AE%9A%E4%B9%89.png?size=small, https://yuhanglee.github.io/posts/can-protocol/images/CAN%E6%A0%87%E5%87%86%E5%B8%A7%E5%AE%9A%E4%B9%89.png?size=medium 1.5x, https://yuhanglee.github.io/posts/can-protocol/images/CAN%E6%A0%87%E5%87%86%E5%B8%A7%E5%AE%9A%E4%B9%89.png?size=large 2x" data-title="CAN标准帧定义" style="--width: 1692px;--aspect-ratio: 1692 / 409;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
 &lt;p>各个段的定义和作用如下；&lt;/p>
@@ -335,8 +325,7 @@
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h2>&lt;blockquote>
-&lt;p>模块内，只需要实现特定功能，尽量简洁。如果需要完成不属于该模块的功能，则需要调用其他模块。&lt;/p>
-&lt;/blockquote>
+&lt;p>模块内，只需要实现特定功能，尽量简洁。如果需要完成不属于该模块的功能，则需要调用其他模块。&lt;/p>&lt;/blockquote>
 &lt;p>首先，需要创建一个Go模块。在模块内，可以为一组离散且有用的函数组成一个或多个相关模块包。例如，可以创建一个包，其中包含具有执行财务分析功能的包，其他编写和财务相关应用程序的开发者就可以在该模块基础之上完成对应功能。&lt;/p>
 &lt;h2 id="创建绿色模块" class="heading-element">&lt;span>1 创建绿色模块&lt;/span>
  &lt;a href="#%e5%88%9b%e5%bb%ba%e7%bb%bf%e8%89%b2%e6%a8%a1%e5%9d%97" class="heading-mark">
@@ -383,28 +372,23 @@
 &lt;blockquote>
 &lt;ol>
 &lt;li>函数关键字为 func&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
+&lt;/ol>&lt;/blockquote>
 &lt;blockquote>
 &lt;ol start="2">
 &lt;li>和C语言不一样的是，参数先写变量名称，后跟参数类型&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
+&lt;/ol>&lt;/blockquote>
 &lt;blockquote>
 &lt;ol start="3">
 &lt;li>返回类型写到最后&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
+&lt;/ol>&lt;/blockquote>
 &lt;blockquote>
 &lt;ol start="4">
 &lt;li>语句不以分号结束，按照行结束&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
+&lt;/ol>&lt;/blockquote>
 &lt;blockquote>
 &lt;ol start="5">
 &lt;li>&lt;code>message&lt;/code> 未定义类型，是弱类型语言&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
+&lt;/ol>&lt;/blockquote>
 &lt;h2 id="调用模块" class="heading-element">&lt;span>调用模块&lt;/span>
  &lt;a href="#%e8%b0%83%e7%94%a8%e6%a8%a1%e5%9d%97" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
@@ -682,16 +666,14 @@
  &lt;/a>
 &lt;/h3>&lt;blockquote>
 &lt;p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-&lt;strong>Note&lt;/strong> that you can use &lt;em>Markdown syntax&lt;/em> within a blockquote.&lt;/p>
-&lt;/blockquote>
+&lt;strong>Note&lt;/strong> that you can use &lt;em>Markdown syntax&lt;/em> within a blockquote.&lt;/p>&lt;/blockquote>
 &lt;h3 id="blockquote-with-attribution" class="heading-element">&lt;span>3.2 Blockquote with attribution&lt;/span>
  &lt;a href="#blockquote-with-attribution" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h3>&lt;blockquote>
 &lt;p>Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;br>
-— &lt;cite>Rob Pike&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/cite>&lt;/p>
-&lt;/blockquote>
+— &lt;cite>Rob Pike&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/cite>&lt;/p>&lt;/blockquote>
 &lt;h2 id="tables" class="heading-element">&lt;span>4 Tables&lt;/span>
  &lt;a href="#tables" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
@@ -912,8 +894,7 @@
  &lt;/a>
 &lt;/h2>&lt;p>&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=large" data-thumbnail="/posts/image-gallery/1.jpg?size=small" data-sub-html="&lt;h2>Image 1&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/image-gallery/1.jpg" alt="Image 1" srcset="https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=small, https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=large 2x" data-title="Image 1" style="--width: 2000px;--aspect-ratio: 2000 / 1400;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a> &lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=large" data-thumbnail="/posts/image-gallery/2.jpg?size=small" data-sub-html="&lt;h2>Image 2&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/image-gallery/2.jpg" alt="Image 2" srcset="https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=small, https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=large 2x" data-title="Image 2" style="--width: 1500px;--aspect-ratio: 1500 / 2250;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>Photo by &lt;a href="https://unsplash.com/@mymind"target="_blank" rel="external nofollow noopener noreferrer">mymind&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> and &lt;a href="https://unsplash.com/@lukechesser"target="_blank" rel="external nofollow noopener noreferrer">Luke Chesser&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> on &lt;a href="https://unsplash.com/"target="_blank" rel="external nofollow noopener noreferrer">Unsplash&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>Math Typesetting</title><link>https://yuhanglee.github.io/posts/math-typesetting/</link><pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate><guid>https://yuhanglee.github.io/posts/math-typesetting/</guid><description>&lt;p>Stack has built-in support for math typesetting using &lt;a href="https://katex.org/"target="_blank" rel="external nofollow noopener noreferrer">KaTeX&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>.&lt;/p>
+&lt;p>Photo by &lt;a href="https://unsplash.com/@mymind"target="_blank" rel="external nofollow noopener noreferrer">mymind&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> and &lt;a href="https://unsplash.com/@lukechesser"target="_blank" rel="external nofollow noopener noreferrer">Luke Chesser&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> on &lt;a href="https://unsplash.com/"target="_blank" rel="external nofollow noopener noreferrer">Unsplash&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>&lt;/blockquote></description></item><item><title>Math Typesetting</title><link>https://yuhanglee.github.io/posts/math-typesetting/</link><pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate><guid>https://yuhanglee.github.io/posts/math-typesetting/</guid><description>&lt;p>Stack has built-in support for math typesetting using &lt;a href="https://katex.org/"target="_blank" rel="external nofollow noopener noreferrer">KaTeX&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>It&amp;rsquo;s not enabled by default side-wide,&lt;/strong> but you can enable it for individual posts by adding &lt;code>math: true&lt;/code> to the front matter. Or you can enable it side-wide by adding &lt;code>math = true&lt;/code> to the &lt;code>params.article&lt;/code> section in &lt;code>config.toml&lt;/code>.&lt;/p>
 &lt;h2 id="inline-math" class="heading-element">&lt;span>1 Inline math&lt;/span>
  &lt;a href="#inline-math" class="heading-mark">
