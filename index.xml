@@ -1,4 +1,189 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客</title><link>https://yuhanglee.github.io/</link><description>lyh的博客：记录工作生活乐趣。</description><generator>Hugo 0.143.1 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Tue, 04 Feb 2025 15:04:06 +0000</lastBuildDate><atom:link href="https://yuhanglee.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Start</title><link>https://yuhanglee.github.io/posts/hugo-start/</link><pubDate>Mon, 20 May 2024 22:20:48 +0800</pubDate><guid>https://yuhanglee.github.io/posts/hugo-start/</guid><description>&lt;p>本博客是由hugo构建的，使用的主题为 &lt;code>stack&lt;/code>。下面介绍一个比较方便的使用 &lt;code>hugo&lt;/code> + &lt;code>stack&lt;/code> + &lt;code>github page&lt;/code> 来构建属于自己的博客。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客</title><link>https://yuhanglee.github.io/</link><description>lyh的博客：记录工作生活乐趣。</description><generator>Hugo 0.143.1 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Tue, 04 Feb 2025 15:10:34 +0000</lastBuildDate><atom:link href="https://yuhanglee.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>RTT 启动顺序</title><link>https://yuhanglee.github.io/posts/b234ee6/</link><pubDate>Tue, 04 Jun 2024 20:50:07 +0800</pubDate><guid>https://yuhanglee.github.io/posts/b234ee6/</guid><category domain="https://yuhanglee.github.io/categories/draft/">draft</category><description>&lt;div class="details admonition abstract open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-clipboard-list" aria-hidden="true">&lt;/i>启动&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">启动是系统的第一个动作。&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;p>系统在完成堆桟初始化之后，就可以调用 &lt;code>rtthread_startup&lt;/code> 函数，完成操作系统启动动作。&lt;/p>
+&lt;p>&lt;code>rtthread_startup&lt;/code> 函数内主要操作：&lt;/p>
+&lt;ul>
+&lt;li>关闭中断&lt;/li>
+&lt;li>初始化必要的片上驱动&lt;/li>
+&lt;li>初始化系统定时器&lt;/li>
+&lt;li>初始化系统调动器&lt;/li>
+&lt;li>初始化信号，如果使用了的话&lt;/li>
+&lt;li>创建第一个应用线程&lt;/li>
+&lt;li>创建定时器线程&lt;/li>
+&lt;li>创建空闲线程&lt;/li>
+&lt;li>加锁CPU锁&lt;/li>
+&lt;/ul>
+&lt;p>最后启动调度器，在调度器内启动第一个线程(一般为&lt;code>main&lt;/code>线程)，并且永远都不会返回。&lt;/p>
+&lt;div class="details admonition info open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-circle-info" aria-hidden="true">&lt;/i>信息&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">为啥不会返回呢？因为完成调度之后，就跳转到第一个线程上执行，且后续会在各个线程中跳转，无法返回调度器函数。&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C" data-lang="C">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">rt_system_scheduler_start&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">struct&lt;/span> &lt;span class="n">rt_thread&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">to_thread&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">rt_ubase_t&lt;/span> &lt;span class="n">highest_ready_priority&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * legacy rt_cpus_lock. some bsp codes still use it as for it&amp;#39;s critical
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * region. Since scheduler is never touching this, here we just release it
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * on the entry.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 主动释放掉 `cpus` 锁，防止前面使用过忘记释放。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">rt_hw_spin_unlock&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">_cpus_lock&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* ISR will corrupt the coherency of running frame */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">rt_hw_local_irq_disable&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * for the accessing of the scheduler context. Noted that we don&amp;#39;t have
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * current_thread at this point
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 加锁调度器。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 我们还没有完成调度器初始化，所以无法使用多核调度，也就不能让其他核心使用调度器。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">_fast_spin_lock&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">_mp_scheduler_lock&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* get the thread scheduling to */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 获取当前就绪列表中优先级最高的任务
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 任务在执行 `rt_thread_startup` 之后，就已经加入就绪列表中。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 一般在启动调度器之前，只会初始化个别系统任务。如：主任务、空闲任务、软件定时器任务。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">to_thread&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">_scheduler_get_highest_priority_thread&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">highest_ready_priority&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 最高任务不能为空，这个很好解释，如果将要跳转的先成为空，那应该向哪里跳转呢。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">RT_ASSERT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to_thread&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* to_thread is picked to running on current core, so remove it from ready queue */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// todo:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">_sched_remove_thread_locked&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to_thread&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* dedigate current core to `to_thread` */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 重新设置第一个线程的核心为启动核，当然启动核心也非必须是ID为0的核心
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 需要考虑一个问题，除了主线程在调度器启动之后立即执行，其余线程，如空闲线程，软件定时器线程是否永远被启动核绑定并执行？
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">RT_SCHED_CTX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to_thread&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">oncpu&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">rt_hw_cpu_id&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">RT_SCHED_CTX&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to_thread&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">stat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">RT_THREAD_RUNNING&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">LOG_D&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;[cpu#%d] switch to priority#%d thread:%.*s(sp:0x%08x)&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">rt_hw_cpu_id&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="nf">RT_SCHED_PRIV&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to_thread&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">current_priority&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">RT_NAME_MAX&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">to_thread&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">to_thread&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">sp&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">_fast_spin_unlock&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">_mp_scheduler_lock&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* switch to new thread */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 切换到第一个任务，需要了解的是，第一次切换，不需要 from 线程，也就是说，只需要知道跳转地址就行。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">rt_hw_context_switch_to&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="kt">rt_ubase_t&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">to_thread&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">sp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">to_thread&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* never come back */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 永远不会执行到这里
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 建议增加一行代码 
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// RT_DEBUG(0);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 这样在启动失败之后，可以非常迅速定位到问题
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="details admonition info open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-circle-info" aria-hidden="true">&lt;/i>信息&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">软件定时器会直接绑定到启动核心，但是空闲任务是每个核心都会执行，所以不需要特别关心。&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="切换上下文" class="heading-element">&lt;span>1 切换上下文&lt;/span>
+ &lt;a href="#%e5%88%87%e6%8d%a2%e4%b8%8a%e4%b8%8b%e6%96%87" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>提到任务切换，跨不过去的一道坎就是上下文切换。把操作系统比作整个人体的话，系统定时器就是心脏，调度器就是大脑，决定下一个可执行哪个任务，而上下文切换就是记忆体，来保存上个动作和恢复当前动作。&lt;/p>
+&lt;p>每个处理器对待现场的处理都是不一样的。例如 &lt;code>ARM&lt;/code> 处理器需要使用汇编语句一次保存通用寄存器和状态寄存器。而 &lt;code>TriCore&lt;/code> 核心有自己的上下文保存区域，简称 &lt;code>CSA(Content Savee Area)&lt;/code>。&lt;/p>
+&lt;h3 id="csa" class="heading-element">&lt;span>1.1 CSA&lt;/span>
+ &lt;a href="#csa" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>&lt;code>CSA&lt;/code> 是 &lt;code>TriCore&lt;/code> 核心的一个特点，在某一个指定的区域按照既定的规则来存储上下文片段，每个片段可以直接将现场保存，可以认为是&amp;quot;快照&amp;quot;，比较容易保存和恢复。每个 &lt;code>CSA&lt;/code> 占用空间为 &lt;code>64字节&lt;/code>。实际占用空间可以通过设置 &lt;code>CPU_FCX&lt;/code> 寄存器初始化第一个 &lt;code>CSA&lt;/code> 元素。&lt;/p>
+&lt;p>TODO: CSA 教程&lt;/p>
+&lt;h3 id="切换上下文-1" class="heading-element">&lt;span>1.2 切换上下文&lt;/span>
+ &lt;a href="#%e5%88%87%e6%8d%a2%e4%b8%8a%e4%b8%8b%e6%96%87-1" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>上面提到了每个 &lt;code>CSA&lt;/code> 块都可以保存一个现场，其要执行的操作就是从 &lt;code>空闲链表&lt;/code> 中申请一块，存储现场之后，在放到上一个被使用的 &lt;code>CSA&lt;/code> 块的 &lt;code>NEXT&lt;/code> 位置，该位置需要按照规定的公式进行计算得出。同样，恢复现场的时候，需要将当前 &lt;code>CSA&lt;/code> 块清空之后，再释放到 &lt;code>空闲链表&lt;/code> 中，并设置 &lt;code>FCX&lt;/code> 寄存器的值。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C" data-lang="C">&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/* 获取当前线程的 CSA LinkWord */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">current_upper_csa&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">LINKWORD_TO_ADDRESS&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">__mfcr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">CPU_PCXI&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="cm">/* 保存当前线程的 CSA 上下文 */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">*&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">from&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current_upper_csa&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/* 将 to 线程的 CSA 地址赋值给当前线程的上层上下文的 LinkWord ，用于 TriCore 自动切换线程。*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">current_upper_csa&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">to&lt;/span>&lt;span class="p">);&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Hugo Start</title><link>https://yuhanglee.github.io/posts/hugo-start/</link><pubDate>Mon, 20 May 2024 22:20:48 +0800</pubDate><guid>https://yuhanglee.github.io/posts/hugo-start/</guid><description>&lt;p>本博客是由hugo构建的，使用的主题为 &lt;code>stack&lt;/code>。下面介绍一个比较方便的使用 &lt;code>hugo&lt;/code> + &lt;code>stack&lt;/code> + &lt;code>github page&lt;/code> 来构建属于自己的博客。&lt;/p>
 &lt;p>可以参考 &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter"target="_blank" rel="external nofollow noopener noreferrer">hugo-stack开始指南&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>来执行构建过程。
 下面我简单复刻一下过程，并对我认为需要注意的地方进行标注。&lt;/p>
 &lt;ul>
@@ -894,50 +1079,4 @@
  &lt;/a>
 &lt;/h2>&lt;p>&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=large" data-thumbnail="/posts/image-gallery/1.jpg?size=small" data-sub-html="&lt;h2>Image 1&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/image-gallery/1.jpg" alt="Image 1" srcset="https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=small, https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=large 2x" data-title="Image 1" style="--width: 2000px;--aspect-ratio: 2000 / 1400;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a> &lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=large" data-thumbnail="/posts/image-gallery/2.jpg?size=small" data-sub-html="&lt;h2>Image 2&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/image-gallery/2.jpg" alt="Image 2" srcset="https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=small, https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=large 2x" data-title="Image 2" style="--width: 1500px;--aspect-ratio: 1500 / 2250;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>Photo by &lt;a href="https://unsplash.com/@mymind"target="_blank" rel="external nofollow noopener noreferrer">mymind&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> and &lt;a href="https://unsplash.com/@lukechesser"target="_blank" rel="external nofollow noopener noreferrer">Luke Chesser&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> on &lt;a href="https://unsplash.com/"target="_blank" rel="external nofollow noopener noreferrer">Unsplash&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>&lt;/blockquote></description></item><item><title>Math Typesetting</title><link>https://yuhanglee.github.io/posts/math-typesetting/</link><pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate><guid>https://yuhanglee.github.io/posts/math-typesetting/</guid><description>&lt;p>Stack has built-in support for math typesetting using &lt;a href="https://katex.org/"target="_blank" rel="external nofollow noopener noreferrer">KaTeX&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>.&lt;/p>
-&lt;p>&lt;strong>It&amp;rsquo;s not enabled by default side-wide,&lt;/strong> but you can enable it for individual posts by adding &lt;code>math: true&lt;/code> to the front matter. Or you can enable it side-wide by adding &lt;code>math = true&lt;/code> to the &lt;code>params.article&lt;/code> section in &lt;code>config.toml&lt;/code>.&lt;/p>
-&lt;h2 id="inline-math" class="heading-element">&lt;span>1 Inline math&lt;/span>
- &lt;a href="#inline-math" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;p>This is an inline mathematical expression: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="block-math" class="heading-element">&lt;span>2 Block math&lt;/span>
- &lt;a href="#block-math" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;p>$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$$
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$$&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>$$
-f(x) = \int_{-\infty}&lt;sup>\infty\hat f(\xi),e&lt;/sup>{2 \pi i \xi x},d\xi
-$$&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">$$
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$$&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>Photo by &lt;a href="https://unsplash.com/@mymind"target="_blank" rel="external nofollow noopener noreferrer">mymind&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> and &lt;a href="https://unsplash.com/@lukechesser"target="_blank" rel="external nofollow noopener noreferrer">Luke Chesser&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> on &lt;a href="https://unsplash.com/"target="_blank" rel="external nofollow noopener noreferrer">Unsplash&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>&lt;/blockquote></description></item></channel></rss>

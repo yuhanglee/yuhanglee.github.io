@@ -1,11 +1,12 @@
 # 博客
 
-共计 10 篇文章
+共计 11 篇文章
 
 ## 2024
 
-共计 5 篇文章
+共计 6 篇文章
 
+- 06-04 [RTT 启动顺序](https://yuhanglee.github.io/posts/b234ee6/ "2024-06-04 20:50:07")
 - 05-20 [Hugo Start](https://yuhanglee.github.io/posts/hugo-start/ "2024-05-20 22:20:48")
 - 05-19 [CAN协议](https://yuhanglee.github.io/posts/can-protocol/ "2024-05-19 00:00:00")
 - 01-11 [TC297驱动](https://yuhanglee.github.io/posts/tc297%E9%A9%B1%E5%8A%A8/ "2024-01-11 21:36:05")
