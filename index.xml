@@ -1,4 +1,207 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客</title><link>https://yuhanglee.github.io/</link><description>lyh的博客：记录工作生活乐趣。</description><generator>Hugo 0.143.1 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Wed, 05 Feb 2025 00:34:04 +0000</lastBuildDate><atom:link href="https://yuhanglee.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>RTT 启动顺序</title><link>https://yuhanglee.github.io/posts/b234ee6/</link><pubDate>Tue, 04 Jun 2024 20:50:07 +0800</pubDate><guid>https://yuhanglee.github.io/posts/b234ee6/</guid><category domain="https://yuhanglee.github.io/categories/draft/">draft</category><description>&lt;div class="details admonition abstract open">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客</title><link>https://yuhanglee.github.io/</link><description>lyh的博客：记录工作生活乐趣。</description><generator>Hugo 0.143.1 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><copyright>本站内容采用 CC BY-NC-SA 4.0 国际许可协议。</copyright><lastBuildDate>Wed, 05 Feb 2025 05:07:12 +0000</lastBuildDate><atom:link href="https://yuhanglee.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>zephyr教程-环境配置</title><link>https://yuhanglee.github.io/posts/e3e350c/</link><pubDate>Tue, 04 Feb 2025 22:08:09 +0800</pubDate><guid>https://yuhanglee.github.io/posts/e3e350c/</guid><category domain="https://yuhanglee.github.io/categories/zephyr/">zephyr</category><description>&lt;div class="details admonition quote">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">zephyr 是一个类 Linux 的开发方式， 其工程由 Linux 基金会管理。&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;ol>
+&lt;li>Zephyr 项目介绍
+Zephyr项目是一个Linux基金会托管的协作项目，一个开源合作项目，联合了业内领先企业，为所有资源受限设备构建了针对资源受限设备进行优化的最佳小型可扩展实时操作系统（RTOS）。&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Zephyr 主页
+&lt;a href="https://github.com/zephyrproject-rtos/zephyr"target="_blank" rel="external nofollow noopener noreferrer">zephyrproject-rtos/zephyr:&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
+Zephyr 官网
+&lt;a href="https://docs.zephyrproject.org"target="_blank" rel="external nofollow noopener noreferrer">docs.zephyrproject.org&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>安装 Ubuntu 环境&lt;/li>
+&lt;/ol>
+&lt;p>Ubuntu安装可以分为两种方式：物理机与虚拟机。
+物理机安装：在电脑硬盘上重新安装一个新的 Ubuntu 镜像，每次开机可以选择是否启动 Ubuntu 系统。
+虚拟机安装：在 Windows 系统中，安装 Vmware 软件，由软件虚拟出一个“电脑”，安装 Ubuntu ，可以和 Windows 同时启动。&lt;/p>
+&lt;p>我们选择第二种，使用虚拟机的方式，安装 &lt;a href="https://cn.ubuntu.com/download/server/step1"target="_blank" rel="external nofollow noopener noreferrer">Ubuntu Server 24.04 LTS&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>。 安装教程，可以参考 &lt;a href="https://blog.csdn.net/qingzhumuqingfeng/article/details/144011787"target="_blank" rel="external nofollow noopener noreferrer">VMware安装ubuntu-24.04-live-server服务版超详细教程_ubuntu 24.04 live server-CSDN博客&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;p>由于 Ubuntu Server 没有界面，所以我选择使用 VS Code 的 SSH 插件，在 Windows 上进行开发。&lt;/p>
+&lt;blockquote>
+&lt;p>VS Code 配置&lt;/p>
+&lt;ol>
+&lt;li>VS Code 插件库内搜索 《Remote - SSH》并安装。&lt;/li>
+&lt;li>按下 Ctrl+Shift+P 选择 Remote-SSH， 并填写 Ubuntu 的 IP 地址、用户名、密码。
+&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/e3e350c/img/%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3.png" alt="命令窗口" srcset="https://yuhanglee.github.io/posts/e3e350c/img/%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3.png?size=small, https://yuhanglee.github.io/posts/e3e350c/img/%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3.png?size=medium 1.5x, https://yuhanglee.github.io/posts/e3e350c/img/%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3.png?size=large 2x" data-title="命令窗口" style="--width: 1029px;--aspect-ratio: 1029 / 216;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>
+&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/e3e350c/img/%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81.png" alt="输入密码" srcset="https://yuhanglee.github.io/posts/e3e350c/img/%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81.png?size=small, https://yuhanglee.github.io/posts/e3e350c/img/%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81.png?size=medium 1.5x, https://yuhanglee.github.io/posts/e3e350c/img/%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81.png?size=large 2x" data-title="输入密码" style="--width: 741px;--aspect-ratio: 741 / 104;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/li>
+&lt;li>打开终端窗口，就可以看到已经进入 Ubuntu 系统了。
+&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/e3e350c/img/%E7%BB%88%E7%AB%AF.png" alt="终端" srcset="https://yuhanglee.github.io/posts/e3e350c/img/%E7%BB%88%E7%AB%AF.png?size=small, https://yuhanglee.github.io/posts/e3e350c/img/%E7%BB%88%E7%AB%AF.png?size=medium 1.5x, https://yuhanglee.github.io/posts/e3e350c/img/%E7%BB%88%E7%AB%AF.png?size=large 2x" data-title="终端" style="--width: 988px;--aspect-ratio: 988 / 250;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/li>
+&lt;/ol>&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>配置 Zephyr 环境&lt;/li>
+&lt;/ol>
+&lt;p>可以参考 &lt;a href="https://docs.zephyrproject.org"target="_blank" rel="external nofollow noopener noreferrer">docs.zephyrproject.org&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 的官方教程，或者按照下面命令依次安装。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装 Zephyr 所依赖的本地环境和软件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install cmake python3 device-tree-compiler 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 检查软件是否已经安装成功&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cmake --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">python3 --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dtc --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装 python 虚拟环境&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pip3 install virtualenv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pip3 install virtualenvwrapper
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 创建虚拟环境配置保存目录，并设置环境变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir &lt;span class="nv">$HOME&lt;/span>/.virtualenvs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo vim ~/.zshrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">WORKON_HOME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$HOME&lt;/span>/.virtualenvs 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">VIRTUALENVWRAPPER_PYTHON&lt;/span>&lt;span class="o">=&lt;/span>/usr/bin/python3.10 &lt;span class="c1"># 根据你的Python路径修改 &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> /usr/local/bin/virtualenvwrapper.sh &lt;span class="c1"># 路径根据virtualenvwrapper 安装路径修改&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 创建虚拟环境，并指定 python 版本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkvirtualenv -p /usr/bin/python3 env_zephyr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 激活虚拟环境&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">workon env_zephyr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 使用 pip 安装 west 构建软件，后续用来编译 Zephyr 工程&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pip install west
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 初始化 Zephyr 工作目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">west init ~/zephyrproject
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> ~/zephyrproject
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 更新软件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">west update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 指定编译器方式有两种： 使用 Zephyr 指定的版本，自定义编译器版本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 1. 使用 Zephyr 指定版本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 如果没有 .zephyrrc 则需要自己创建&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vim ~/.zephyrrc 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">ZEPHYR_TOOLCHAIN_VARIANT&lt;/span>&lt;span class="o">=&lt;/span>zephyr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 2. 如果使用 ARM 芯片，可以手动指定 gnu arm，以及指定工具链路径&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vim ~/.zephyrrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">ZEPHYR_TOOLCHAIN_VARIANT&lt;/span>&lt;span class="o">=&lt;/span>gnuarmemb
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GNUARMEMB_TOOLCHAIN_PATH&lt;/span>&lt;span class="o">=&lt;/span>/usr/arm-none-eabi &lt;span class="c1"># 执行本地的 arm-none-eabi 路径，该路径下有 bin 文件夹&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 如果使用 west build 编译报错找不到 ninja，则需要安装 ninja 环境。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt install ninja-build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ninja --verion &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 全部更新完成之后的软件列表如下：&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; ls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bootloader modules tools zephyr&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>测试编译速度&lt;/li>
+&lt;/ol>
+&lt;p>在 &lt;code>~/zephyrproject&lt;/code> 路径下，执行 &lt;code>time west build -b stm32f103_mini zephyr/samples/hello_world --build-dir build/stm32f103_mini&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 进入 zephyr 工作目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; &lt;span class="nb">cd&lt;/span> ~/zephyrproject
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 切换 python 虚拟环境，如果之前已经进入，则不需要这个步骤。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 一般会有报错： 无法找到 west 软件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; workon env_zephyr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># -b : 执行控制器&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># zephyr/samples/hello_world 需要编译的应用&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># --build-dir build/stm32f103_mini 指定编译结果保存路径 也可以使用 -d build/stm32f103_mini&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; &lt;span class="nb">time&lt;/span> west build -b stm32f103_mini zephyr/samples/hello_world --build-dir build/stm32f103_mini
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 编译正常完成。共用时 20.921 秒&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>135/135&lt;span class="o">]&lt;/span> Linking C executable zephyr/zephyr.elf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Memory region Used Size Region Size %age Used
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FLASH: &lt;span class="m">12854&lt;/span> B &lt;span class="m">256&lt;/span> KB 4.90%
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RAM: &lt;span class="m">4160&lt;/span> B &lt;span class="m">48&lt;/span> KB 8.46%
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> IDT_LIST: &lt;span class="m">0&lt;/span> GB &lt;span class="m">32&lt;/span> KB 0.00%
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Generating files from /home/liyuhang/zephyrproject/build/stm32f103_mini/zephyr/zephyr.elf &lt;span class="k">for&lt;/span> board: stm32f103_mini
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">west build -b stm32f103_mini zephyr/samples/hello_world --build-dir 35.57s user 15.28s system 243% cpu 20.921 total&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>至此，Zephyr 基础环境配置工作已经完成。&lt;/p></description></item><item><title>RTT 启动顺序</title><link>https://yuhanglee.github.io/posts/b234ee6/</link><pubDate>Tue, 04 Jun 2024 20:50:07 +0800</pubDate><guid>https://yuhanglee.github.io/posts/b234ee6/</guid><category domain="https://yuhanglee.github.io/categories/draft/">draft</category><description>&lt;div class="details admonition abstract open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-clipboard-list" aria-hidden="true">&lt;/i>启动&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
  &lt;div class="details-content">
  &lt;div class="admonition-content">启动是系统的第一个动作。&lt;/div>
@@ -1060,23 +1263,4 @@
 &lt;p>The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=PAAkCSZUG1c"target="_blank" rel="external nofollow noopener noreferrer">talk&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> during Gopherfest, November 18, 2015.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Image gallery</title><link>https://yuhanglee.github.io/posts/image-gallery/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://yuhanglee.github.io/posts/image-gallery/</guid><description>&lt;p>Hugo theme Stack supports the creation of interactive image galleries using Markdown. It&amp;rsquo;s powered by &lt;a href="https://photoswipe.com/"target="_blank" rel="external nofollow noopener noreferrer">PhotoSwipe&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> and its syntax was inspired by &lt;a href="https://typlog.com/"target="_blank" rel="external nofollow noopener noreferrer">Typlog&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>.&lt;/p>
-&lt;p>To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo&amp;rsquo;s page bundle feature to read the dimensions of the image. &lt;strong>External images are not supported.&lt;/strong>&lt;/p>
-&lt;h2 id="syntax" class="heading-element">&lt;span>1 Syntax&lt;/span>
- &lt;a href="#syntax" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Image 1&lt;/span>](&lt;span class="na">1.jpg&lt;/span>) ![&lt;span class="nt">Image 2&lt;/span>](&lt;span class="na">2.jpg&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="result" class="heading-element">&lt;span>2 Result&lt;/span>
- &lt;a href="#result" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;p>&lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=large" data-thumbnail="/posts/image-gallery/1.jpg?size=small" data-sub-html="&lt;h2>Image 1&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/image-gallery/1.jpg" alt="Image 1" srcset="https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=small, https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/image-gallery/1.jpg?size=large 2x" data-title="Image 1" style="--width: 2000px;--aspect-ratio: 2000 / 1400;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a> &lt;a class="lightgallery" href="https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=large" data-thumbnail="/posts/image-gallery/2.jpg?size=small" data-sub-html="&lt;h2>Image 2&lt;/h2>">&lt;img loading="lazy" src="https://yuhanglee.github.io/posts/image-gallery/2.jpg" alt="Image 2" srcset="https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=small, https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=medium 1.5x, https://yuhanglee.github.io/posts/image-gallery/2.jpg?size=large 2x" data-title="Image 2" style="--width: 1500px;--aspect-ratio: 1500 / 2250;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>Photo by &lt;a href="https://unsplash.com/@mymind"target="_blank" rel="external nofollow noopener noreferrer">mymind&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> and &lt;a href="https://unsplash.com/@lukechesser"target="_blank" rel="external nofollow noopener noreferrer">Luke Chesser&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> on &lt;a href="https://unsplash.com/"target="_blank" rel="external nofollow noopener noreferrer">Unsplash&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>&lt;/blockquote></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
